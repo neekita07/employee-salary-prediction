@@ -122,17 +122,17 @@ col1, col2 = st.columns([1, 2])
 with col1:
     st.sidebar.header("📝 Enter Employee Details")
     age = st.sidebar.slider("Age", 18, 75, 30)
-    workclass = workclass_options[st.sidebar.selectbox("Workclass", list(workclass_options.keys()))]
+    workclass = workclass_options[st.sidebar.selectbox("Workclass", list(workclass_options.keys()), key="workclass")]
     fnlwgt = st.sidebar.number_input("Fnlwgt (Final Weight)", value=200000)
-    marital_status = marital_status_options[st.sidebar.selectbox("Marital Status", list(marital_status_options.keys()))]
-    occupation = occupation_options[st.sidebar.selectbox("Occupation", list(occupation_options.keys()))]
-    relationship = relationship_options[st.sidebar.selectbox("Relationship", list(relationship_options.keys()))]
-    race = race_options[st.sidebar.selectbox("Race", list(race_options.keys()))]
-    gender = gender_options[st.sidebar.selectbox("Gender", list(gender_options.keys()))]
+    marital_status = marital_status_options[st.sidebar.selectbox("Marital Status", list(marital_status_options.keys()), key="marital")]
+    occupation = occupation_options[st.sidebar.selectbox("Occupation", list(occupation_options.keys()), key="occupation")]
+    relationship = relationship_options[st.sidebar.selectbox("Relationship", list(relationship_options.keys()), key="relationship")]
+    race = race_options[st.sidebar.selectbox("Race", list(race_options.keys()), key="race")]
+    gender = gender_options[st.sidebar.selectbox("Gender", list(gender_options.keys()), key="gender")]
     capital_gain = st.sidebar.number_input("Capital Gain", value=0)
     capital_loss = st.sidebar.number_input("Capital Loss", value=0)
     hours_per_week = st.sidebar.slider("Hours per Week", 1, 100, 40)
-    native_country = native_country_options[st.sidebar.selectbox("Native Country", list(native_country_options.keys()))]
+    native_country = native_country_options[st.sidebar.selectbox("Native Country", list(native_country_options.keys()), key="country")]
     educational_num = st.sidebar.slider("Educational Number", 1, 16, 10)
 
 with col2:
